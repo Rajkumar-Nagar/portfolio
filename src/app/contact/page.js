@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center bg-gray-900 text-white px-6 py-16">
+    <section className="min-h-screen flex flex-col w-full justify-center items-center bg-gray-900 text-white px-6 py-16">
       <h2 className="text-4xl font-bold mb-4 text-teal-400">Contact</h2>
       <p className="text-md text-gray-400 mb-8">
         I’m currently available for freelance work
@@ -21,7 +21,7 @@ const Contact = () => {
               Your name *
             </label>
             <input
-              className="appearance-none block w-full bg-transparent text-gray-200 border-b border-teal-400 py-3 px-4 leading-tight focus:outline-none focus:border-teal-300"
+              className="appearance-none block w-full bg-transparent text-gray-200 border-b border-teal-400 py-3 px-0 leading-tight focus:outline-none focus:border-teal-300"
               id="name"
               type="text"
               placeholder="Enter your name"
@@ -35,7 +35,7 @@ const Contact = () => {
               Your email *
             </label>
             <input
-              className="appearance-none block w-full bg-transparent text-gray-200 border-b border-teal-400 py-3 px-4 leading-tight focus:outline-none focus:border-teal-300"
+              className="appearance-none block w-full bg-transparent text-gray-200 border-b border-teal-400 py-3 px-0 leading-tight focus:outline-none focus:border-teal-300"
               id="email"
               type="email"
               placeholder="Enter your email"
@@ -50,7 +50,7 @@ const Contact = () => {
             Your message *
           </label>
           <textarea
-            className="appearance-none block w-full bg-transparent text-gray-200 border-b border-teal-400 py-3 px-4 leading-tight focus:outline-none focus:border-teal-300"
+            className="appearance-none block w-full bg-transparent text-gray-200 border-b border-teal-400 py-3 px-0 leading-tight focus:outline-none focus:border-teal-300"
             id="message"
             placeholder="Enter your needs"
             rows="4"

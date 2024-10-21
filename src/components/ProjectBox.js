@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function ProjectBox({ project }) {
     return (
-        <div className="bg-[#0f1724] w-full h-full text-white rounded-lg p-6 shadow-lg transform transition duration-500 hover:scale-105 relative overflow-hidden">
+        <div className="w-full h-full text-white rounded-lg p-6 shadow-lg transform transition duration-500 hover:scale-105 relative overflow-hidden">
             {/* Gradient Border */}
             <div className="rounded-lg border-2 border-transparent bg-gradient-to-r from-[#1e293b] to-[#334155] p-[2px]">
                 <div className="h-full w-full bg-[#0f1724] rounded-lg p-6">
@@ -31,7 +31,7 @@ function ProjectBox({ project }) {
                     <div className="mb-6 gap-2 flex flex-wrap ">
                         {
                             project.technologies.slice(0, 4).map((item) => (
-                                <span className="inline-block bg-[#1e293b] text-sm px-3 py-1 rounded-full text-gray-300">
+                                <span key={item} className="inline-block bg-[#1e293b] text-sm px-3 py-1 rounded-full text-gray-300">
                                     {item}
                                 </span>
                             ))

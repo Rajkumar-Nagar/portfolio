@@ -1,16 +1,11 @@
-// pages/index.js
-
 import { BackgroundBeamsWithCollisionDemo } from '@/components/backGround';
-import Navbar from '@/components/Navbar';
-import Link from 'next/link';
-import Projects from './projects/page';
-import ProjectBox from '@/components/ProjectBox';
-import SkillsSection from './skills/page';
-import ExperienceSection from './experience/page';
-import Contact from './contact/page';
-import About from './about/page';
 import { BackgroundBeamsDemo } from '@/components/backGrondBeam';
+import Navbar from '@/components/Navbar';
 import Footer from '@/components/footer';
+import { RetroGridDemo } from '@/components/motionBackground';
+import ProjectSection from '@/components/project-section';
+import SkillsSection from '@/components/skill-section';
+import About from './about/page';
 
 export default function Home() {
   return (
@@ -23,8 +18,8 @@ export default function Home() {
           <About />
           <BackgroundBeamsDemo/>
           <SkillsSection/>
-          <Projects/>
-          <Contact/>
+          <ProjectSection/>
+          <RetroGridDemo/>
           <Footer/>
         </div>
       </div>
