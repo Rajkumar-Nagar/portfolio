@@ -1,16 +1,42 @@
-import Link from "next/link";
+import React from "react";
+import Image from "next/image";
 
-export default function About() {
-    return (
-      <div className="min-h-screen flex flex-col items-center justify-center space-y-8 text-center">
-        <h1 className="text-5xl font-bold">About Me</h1>
-        <p className="text-xl max-w-2xl">
-          I am a passionate Full Stack Developer who enjoys building applications that make an impact. With experience in startups like Kisan and MintraGo, I bring leadership and problem-solving skills to the table.
-        </p>
-        <Link href="/contact" className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full">
-          Contact Me
-        </Link>
+const About = () => {
+  return (
+    <section className="min-h-screen flex flex-col justify-center items-center bg-gray-900 text-white px-6 py-16">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        {/* Title Section */}
+        <div className="w-full md:w-1/2">
+          <h2 className="text-4xl font-bold text-teal-400 mb-4">About Me</h2>
+          <div className="bg-teal-400 h-1 w-24 mb-8"></div>
+          <div className="bg-gray-800 p-6 rounded-xl shadow-lg">
+            <p className="text-sm text-gray-200 font-mono">
+              <span className="text-teal-300">Hello!</span><br />
+              <br />
+              My name is Rajkumar, and I specialize in full-stack web and app development, with expertise in <span className="text-teal-300">HTML</span>, <span className="text-teal-300">CSS</span>, <span className="text-teal-300">JavaScript</span>, <span className="text-teal-300">React</span>, and <span className="text-teal-300">Node.js</span>.<br />
+              <br />
+              I'm a passionate full-stack developer and competitive programmer, always aiming to create clean, efficient, and scalable code. I thrive on continuously learning and improving my skills.<br />
+              <br />
+              When I'm not coding, I enjoy contributing to open-source projects, solving coding challenges, or working on my latest side projects. I also spend time <span className="text-teal-300">exploring new technologies</span> and enhancing my problem-solving skills through competitive programming.<br />
+              <br />
+              I'm driven by a desire to push my limits and explore new perspectives, both in technology and in life.
+            </p>
+
+          </div>
+        </div>
+        {/* Image Section */}
+        <div className="w-full md:w-1/2">
+          <Image
+            src={"/profile.png"}
+            alt="Coding on Laptop"
+            className="rounded-xl shadow-lg"
+            width={400}
+            height={300}
+          />
+        </div>
       </div>
-    )
-  }
-  
+    </section>
+  );
+};
+
+export default About;

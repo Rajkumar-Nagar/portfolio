@@ -1,27 +1,72 @@
-import Link from 'next/link'
+import React from "react";
 
-
-export default function Contact() {
+const Contact = () => {
   return (
-    <div>
-      <h1 className="text-4xl font-bold mb-8">Contact Me</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl text-blue-400">Send Me a Message</h2>
-          <form className="mt-4 space-y-4">
-            <input className="w-full bg-gray-700 border-gray-600 p-2 rounded-lg" placeholder="Your Name" />
-            <input className="w-full bg-gray-700 border-gray-600 p-2 rounded-lg" type="email" placeholder="Your Email" />
-            <textarea className="w-full bg-gray-700 border-gray-600 p-2 rounded-lg" placeholder="Your Message"></textarea>
-            <button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg">Send Message</button>
-          </form>
+    <section className="min-h-screen flex flex-col justify-center items-center bg-gray-900 text-white px-6 py-16">
+      <h2 className="text-4xl font-bold mb-4 text-teal-400">Contact</h2>
+      <p className="text-md text-gray-400 mb-8">
+        I’m currently available for freelance work
+      </p>
+      <button className="border-2 border-teal-400 text-teal-400 px-8 py-3 rounded-full mb-12 hover:bg-teal-400 hover:text-gray-900 transition duration-300">
+        Send Me A Message
+      </button>
+
+      <form className="w-full max-w-4xl">
+        <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label
+              className="block uppercase tracking-wide text-teal-400 text-xs font-bold mb-2"
+              htmlFor="name"
+            >
+              Your name *
+            </label>
+            <input
+              className="appearance-none block w-full bg-transparent text-gray-200 border-b border-teal-400 py-3 px-4 leading-tight focus:outline-none focus:border-teal-300"
+              id="name"
+              type="text"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div className="w-full md:w-1/2 px-3">
+            <label
+              className="block uppercase tracking-wide text-teal-400 text-xs font-bold mb-2"
+              htmlFor="email"
+            >
+              Your email *
+            </label>
+            <input
+              className="appearance-none block w-full bg-transparent text-gray-200 border-b border-teal-400 py-3 px-4 leading-tight focus:outline-none focus:border-teal-300"
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+            />
+          </div>
         </div>
-        <div className="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl text-blue-400">Contact Information</h2>
-          <p className="mt-4">Email: 2021uce1514@mnit.ac.in</p>
-          <p>GitHub: <Link href="https://github.com/Rajkumar-Nagar" className="text-blue-400 hover:underline">github.com/Rajkumar-Nagar</Link></p>
-          <p>LinkedIn: <Link href="https://www.linkedin.com/in/rajkumarnagar" className="text-blue-400 hover:underline">linkedin.com/in/rajkumarnagar</Link></p>
+        <div className="w-full px-3 mb-6">
+          <label
+            className="block uppercase tracking-wide text-teal-400 text-xs font-bold mb-2"
+            htmlFor="message"
+          >
+            Your message *
+          </label>
+          <textarea
+            className="appearance-none block w-full bg-transparent text-gray-200 border-b border-teal-400 py-3 px-4 leading-tight focus:outline-none focus:border-teal-300"
+            id="message"
+            placeholder="Enter your needs"
+            rows="4"
+          ></textarea>
         </div>
-      </div>
-    </div>
-  )
-}
+        <div className="w-full px-3 flex justify-center mt-8">
+          <button
+            type="submit"
+            className="bg-teal-400 text-gray-900 px-6 py-3 rounded-full flex items-center gap-2 hover:bg-teal-500 transition duration-300"
+          >
+            Send Message <span>🚀</span>
+          </button>
+        </div>
+      </form>
+    </section>
+  );
+};
+
+export default Contact;

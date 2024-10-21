@@ -1,53 +1,75 @@
+import ProjectBox from "@/components/ProjectBox"
 import Link from "next/link"
 
 const projects = [
   {
     title: "Kisan",
-    description: "A platform for farmers offering services like online mandi, AI assistance, and land transactions.",
-    technologies: ["Next.js", "TypeScript", "MongoDB", "NextAuth", "Prisma"],
+    description: "A comprehensive platform for farmers featuring services like online mandi, crop rate dashboard, AI bot assistance, transport booking, labor booking, farmer community, and land transactions.",
+    technologies: ["Next.js", "TypeScript", "MongoDB", "NextAuth", "Prisma", "Socket.io", "Tailwind CSS"],
     liveLink: "https://kisan-rouge.vercel.app/",
+    ImageUrl: "/kishan.jpg",
     sourceLink: "https://github.com/Rajkumar-Nagar/kishan"
   },
   {
     title: "MintraGo",
-    description: "College startup project where I served as Founder & Full Stack Developer.",
+    description: "College startup project where I served as Founder & Full Stack Developer. Developed and maintained the platform, handling project planning and execution.",
     technologies: ["React", "Node.js", "MongoDB"],
+    ImageUrl: "/mintrago1.jpg",
     liveLink: "https://mintrago.in/",
     sourceLink: "https://github.com/Rajkumar-Nagar/MintraGo"
   },
   {
     title: "Gramzo",
-    description: "Organic Products Startup where I led app and website development.",
+    description: "Led app and website development for an organic products startup. Managed the technical team, improving user experience and driving growth.",
     technologies: ["React Native", "Firebase", "Node.js"],
     liveLink: "#",
+    ImageUrl: "/gramzo.jpg",
     sourceLink: "#"
+  },
+  {
+    title: "Chesstune",
+    description: "React Native chess app allowing users to play puzzles, challenge others, create custom puzzles, and use login/signup features.",
+    technologies: ["React Native", "Firebase", "Chess.js"],
+    liveLink: "#",
+    ImageUrl: "/chesstune.jpg",
+    sourceLink: "#"
+  },
+  {
+    title: "YouTube Backend",
+    description: "Developed various APIs for CRUD operations, login, signup, and image uploads. Implemented authentication using JWT tokens.",
+    technologies: ["Node.js", "Express.js", "JWT", "Multer"],
+    liveLink: "#",
+    ImageUrl: "/Youtube.jpg",
+    sourceLink: "#"
+  },
+  {
+    title: "NewsMonkey",
+    description: "ReactJS-based news application where users can read news articles across various categories. Implemented navigation using React Router and fetched data from APIs.",
+    technologies: ["ReactJS", "React Router", "API"],
+    liveLink: "#",
+    ImageUrl: "/news.jpg",
+    sourceLink: "#"
+  },
+  {
+    title: "Kalyaan-Hospital",
+    description: "Hospital management system with features like appointment scheduling, staff management, and a medical store. Included user authentication and role-based access.",
+    technologies: ["Next.js", "TypeScript", "NextAuth", "Prisma", "SQL", "PostgreSQL", "Tailwind CSS"],
+    liveLink: "https://e-hospital.vercel.app/",
+    ImageUrl: "/kalyaan.jpg",
+    sourceLink: "https://github.com/Rajkumar-Nagar/e-hospital"
   }
-]
+];
 
 export default function Projects() {
   return (
-    <div>
-      <h1 className="text-4xl font-bold mb-8">My Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="w-full">
+      <h1 className="text-4xl font-bold mb-8 px-8">My Projects</h1>
+      <div className="grid "
+        style={{
+          gridTemplateColumns: 'repeat(auto-fit,minmax(400px,1fr))'
+        }}>
         {projects.map((project, index) => (
-          <div key={index} className="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow-lg">
-            <h2 className="text-2xl text-blue-400">{project.title}</h2>
-            <p className="text-gray-300 mt-2">{project.description}</p>
-            <div className="mt-4">
-              <span className="font-semibold text-blue-400">Technologies:</span>
-              <div className="flex flex-wrap gap-2 mt-2">
-                {project.technologies.map((tech, i) => (
-                  <span key={i} className="px-2 py-1 bg-blue-900 text-blue-200 rounded-full text-sm">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="mt-4 flex space-x-4">
-              <Link href={project.liveLink} className="text-blue-400 hover:underline" target="_blank">Live</Link>
-              <Link href={project.sourceLink} className="text-blue-400 hover:underline" target="_blank">Source</Link>
-            </div>
-          </div>
+          <ProjectBox key={index} project={project} />
         ))}
       </div>
     </div>
